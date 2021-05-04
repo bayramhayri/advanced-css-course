@@ -75,13 +75,10 @@
     &::after {
       content: '';
       display: block;
-      position: absolute;
-      top: 50%;
-      left: 50%;
+      @include center-hr-and-ver;
       height: 1.3rem;
       width: 1.3rem;
       border-radius: 50%;
-      transform: translate(-50%, -50%);
       background-color: $color-primary;
       opacity: 0;
       transition: opacity 0.2s;
