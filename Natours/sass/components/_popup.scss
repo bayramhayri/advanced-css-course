@@ -10,6 +10,10 @@
   visibility: hidden;
   transition: all 0.3s;
 
+  @include respond(tab-land) {
+    text-align: center;
+  }
+
   &__content {
     @include center-hr-and-ver;
     width: 75%;
@@ -26,6 +30,10 @@
   &__left {
     width: 33.3%;
     display: table-cell;
+
+    @include respond(tab-land) {
+      display: none;
+    }
   }
 
   &__right {
@@ -56,6 +64,14 @@
     -ms-hyphens: auto;
     -webkit-hyphens: auto;
     hyphens: auto;
+
+    @include respond(tab-land) {
+      margin-bottom: 3rem;
+
+      -moz-column-count: 1;
+
+      column-count: 1;
+    }
   }
 
   &:target {
